@@ -1,2 +1,2 @@
 # Squad5
- Game created in the 1st semester of FATEC
+This game is a shmup (Shoot 'em up) and was created with a group of colleagues in the 1st semester of FATEC.
