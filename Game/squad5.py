@@ -358,6 +358,7 @@ while not fim:
                         som_ast.play()
                         
             for A in asteroid: # verifica a colisão da nave com os asterois
+                # 1 - Frontal collision / 2 - Rear collision / 3 - Bottom collision / 4 - Top collision
                 if X_avo + 98 > A[1] and X_avo < A[1] + 40 and Y_avo + 40 > A[2] and Y_avo < A[2] + 30: # condição de colisão
                     A[4] = 1 # ativa a colisão na tabela de asteroid
                     som_exp.set_volume(0.4)
@@ -420,11 +421,11 @@ while not fim:
                 X_avo = 0
         if teclas[K_d] or teclas[K_RIGHT]:
             X_avo = X_avo + passo_avo
-            if X_avo > 700:
+            if X_avo > 700: # X_avo + img size = 800 (window size), so, 800-100(img size) = 700
                 X_avo = 700
         if teclas[K_s] or teclas[K_DOWN]:
             Y_avo = Y_avo + passo_avo
-            if Y_avo > 558:
+            if Y_avo > 558: # Y_avo + img size = 600 (window size), so, 600-42(img size) = 558
                 Y_avo = 558
         if teclas[K_w] or teclas[K_UP]:
             Y_avo = Y_avo - passo_avo
